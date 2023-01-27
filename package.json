@@ -1,0 +1,24 @@
+{
+  "name": "zustand-pub",
+  "version": "0.0.1",
+  "description": "State management for cross-application based on zustand",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AwesomeDevin/zustand-pub.git"
+  },
+  "keywords": [
+    "zustand",
+    "micro-frontend",
+    "modularization"
+  ],
+  "author": "awesomedevin.deng@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AwesomeDevin/zustand-pub/issues"
+  },
+  "homepage": "https://github.com/AwesomeDevin/zustand-pub#readme"
+}
