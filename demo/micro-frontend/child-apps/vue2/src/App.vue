@@ -17,6 +17,8 @@ const pub = new PubStore('micro-app')
 
 const store = pub.getStore("platformStore");
 const { useStore } = create(store);
+console.log('store',store, useStore)
+
 
 const setAppName = useStore((state)=>state.setAppName)
 const setValue = useStore((state)=>state.setValue)
