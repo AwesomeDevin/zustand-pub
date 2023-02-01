@@ -1,6 +1,6 @@
 {
   "name": "zustand-pub",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0-beta.5",
   "description": "State management for cross-application based on zustand",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,24 +21,20 @@
       "require": "./dist/index.js",
       "default": "./dist/index.js"
     },
-    "./react": {
-      "types": "./dist/typings/react.d.ts",
-      "import": "./dist/react.mjs",
-      "module": "./dist/react.mjs",
-      "require": "./dist/react.js",
-      "default": "./dist/react.js"
-    },
-    "./vue": {
-      "types": "./dist/typings/vue.d.ts",
-      "import": "./dist/vue.mjs",
-      "require": "./dist/vue.js",
-      "default": "./dist/vue.js"
+    "./*": {
+      "types": "./dist/typings/*.d.ts",
+      "import": "./dist/*.mjs",
+      "module": "./dist/*.mjs",
+      "require": "./dist/*.js",
+      "default": "./dist/*.js"
     }
   },
   "typesVersions": {
     "*": {
       "react": ["./dist/typings/react.d.ts"],
-      "vue": ["./dist/typings/vue.d.ts"]
+      "vue": ["./dist/typings/vue.d.ts"],
+      "dist/react.mjs": ["./dist/typings/react.d.ts"],
+      "dist/vue.mjs": ["./dist/typings/vue.d.ts"]
     }
   },
   "files": [

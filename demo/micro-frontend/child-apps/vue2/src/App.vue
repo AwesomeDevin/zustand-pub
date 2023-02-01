@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import  PubStore from "zustand-pub/vue";
+import PubStore from "zustand-pub/dist/vue.mjs";
 import create from 'zustand-vue'
 
 const pub = new PubStore('micro-app')

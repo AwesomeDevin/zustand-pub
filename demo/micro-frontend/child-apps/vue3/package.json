@@ -12,7 +12,7 @@
     "react": "^18.2.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0",
-    "zustand-pub": "^1.0.0-beta.3",
+    "zustand-pub": "1.0.0-beta.5",
     "zustand-vue": "^1.0.0-beta.5"
   },
   "devDependencies": {

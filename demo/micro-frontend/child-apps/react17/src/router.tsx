@@ -8,7 +8,7 @@ import {
   useHistory,
 } from "react-router-dom";
 import Home from "./pages/home/home";
-import ReactPubStore from "zustand-pub/react";
+import ReactPubStore from "zustand-pub/dist/react.mjs";
 import create from "zustand";
 
 

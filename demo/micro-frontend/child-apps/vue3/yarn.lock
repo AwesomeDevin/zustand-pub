@@ -9502,10 +9502,10 @@ yorkie@^2.0.0:
     normalize-path "^1.0.0"
     strip-indent "^2.0.0"
 
-zustand-pub@^1.0.0-beta.3:
-  version "1.0.0-beta.3"
-  resolved "https://registry.npmjs.org/zustand-pub/-/zustand-pub-1.0.0-beta.3.tgz#492200c9e7d6cc196d406c6291a032b459f6c48d"
-  integrity sha512-CQmxgisXpSH0GWvmMSWmf9MIzdnhE2bjNhGeQxqtLx/AVK5qQkMINZrEAnfX3lpMlY/gqD5UselD5ib8T7YCng==
+zustand-pub@1.0.0-beta.5:
+  version "1.0.0-beta.5"
+  resolved "https://registry.npmjs.org/zustand-pub/-/zustand-pub-1.0.0-beta.5.tgz#3452d3b30768e681aa6927bbb94d2af9fb1048b0"
+  integrity sha512-HFq6V9EzAH+TXyLx9asQnlXyfb3UzH4yipbetsgG77SsNUwKPttwMR9i42JDl8ZGD077DZqb7ZBWAS1marnOyQ==
 
 zustand-vue@^1.0.0-beta.5:
   version "1.0.0-beta.5"
