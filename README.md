@@ -114,7 +114,7 @@ const pubStore = new ReactPubStore()
 ### defineStore(key,fn)
 Used to fill data into isolated containers
 
-参数 | 说明 | 类型 
+Parameter | Desc | Type 
 --- | --- | --- 
 key | data unique identifier | string
 fn | callback | (set, get) => Object
