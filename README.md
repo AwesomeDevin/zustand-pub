@@ -1,8 +1,11 @@
 # zustand-pub
+
 [![Build Size](https://img.shields.io/bundlephobia/minzip/zustand-pub?label=bundle%20size)](https://bundlephobia.com/result?p=zustand-pub)
 [![Version](https://img.shields.io/npm/v/zustand-pub?style=flat)](https://www.npmjs.com/package/zustand-pub)
 
 Cross-Application/Cross-Framework State Management And Sharing based on zustand and zustand-vue.
+### [MORE DETAILS](https://awesomedevin.github.io/zustand-vue/en/)
+
 
 
 ### Ability
@@ -113,7 +116,7 @@ Used to fill data into isolated containers
 
 参数 | 说明 | 类型 
 --- | --- | --- 
-key | 数据唯一标识 | string
+key | data unique identifier | string
 fn | callback | (set, get) => Object
 
 
