@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/npm/v/zustand-pub?style=flat)](https://www.npmjs.com/package/zustand-pub)
 
 Cross-Application/Cross-Framework State Management And Sharing based on zustand and zustand-vue.
-### [MORE DETAILS](https://awesomedevin.github.io/zustand-vue/en/)
+### [Official Document](https://awesomedevin.github.io/zustand-vue/en/)
 
 
 
