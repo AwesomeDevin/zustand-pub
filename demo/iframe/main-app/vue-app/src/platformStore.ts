@@ -1,7 +1,5 @@
-// import ReactPubStore from 'zustand-pub/react'
-import { create } from 'zustand'
-import PubStore from 'zustand-pub'
-
+import create from 'zustand-vue'
+import PubStore from './store'
 
 interface IState {
   appInfo: {

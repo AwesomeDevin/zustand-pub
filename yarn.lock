@@ -356,10 +356,10 @@ wrappy@1:
   resolved "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==
 
-zustand-vue@^1.0.0-beta.6:
-  version "1.0.0-beta.6"
-  resolved "https://registry.npmjs.org/zustand-vue/-/zustand-vue-1.0.0-beta.6.tgz#74dc9ed6fbd200dea424f9a36fd4f4146311aa7a"
-  integrity sha512-BjRqGnUZVFezhmcgumABlnsBrP7gboCs32X5v/yyA4LLto6AV9TAhqarFg+BolhoQTFOIbZ78jzK6mriIeSXfQ==
+zustand-vue@1.0.0-beta.9:
+  version "1.0.0-beta.9"
+  resolved "https://registry.npmjs.org/zustand-vue/-/zustand-vue-1.0.0-beta.9.tgz#7eda12598a0365dfc749cac7be4291b230c1bf38"
+  integrity sha512-SKPtoeydXdq8iSPcav+ApklV6CNLS0QSFAV+YZ68ACC0ZgJfGQJZr9GzIvUb3Iyn4fVMtTFHuCA1Rz1yOUNg2Q==
   dependencies:
     zustand "^4.1.4"
 
