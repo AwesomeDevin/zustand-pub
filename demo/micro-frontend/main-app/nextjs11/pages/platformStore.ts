@@ -1,4 +1,7 @@
-import ReactPubStore from 'zustand-pub/react'
+// import ReactPubStore from 'zustand-pub/react'
+import { create } from 'zustand'
+import ReactPubStore from './store'
+
 
 console.log('ReactPubStore',ReactPubStore)
 
@@ -16,7 +19,9 @@ interface IAction {
 
 export const Pub = new ReactPubStore('micro-app')
 
-const usePlatformStore = Pub.defineStore<IState & IAction>('platformStore', (set) => ({
+const pubStore = Pub.defineStore<IState & IAction>('platformStore', (set, get, store) => {
+  console.log('get, store',get, store)
+  return ({
   appInfo: { name: '' },
   value: 1,
   setAppName(val: string) {
@@ -31,6 +36,8 @@ const usePlatformStore = Pub.defineStore<IState & IAction>('platformStore', (set
       value: val
     })
   }
-}))
+})})
+
+const usePlatformStore = create(pubStore)
 
 export default usePlatformStore
