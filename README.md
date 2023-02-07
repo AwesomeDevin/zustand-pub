@@ -6,7 +6,6 @@
 🐻 Cross-Application/Cross-Framework State Management And Sharing based on zustand for React/Vue.
 ### [Official Document](https://awesomedevin.github.io/zustand-vue/en/)
 
-
 ### Ability
 
 It is suitable for business scenarios such as modularization, componentization, and micro-front-end, and provides state management and sharing capabilities across applications and frameworks。
@@ -68,7 +67,7 @@ function AppA() {
 }
 ``` 
 
-### Step 3： Get data `platformStore` under the isolated container `pubStore` across applications (App B)
+### Step 3： Get the `platformStore` under the isolated container `pubStore` and bind the Component (App B)
 ```js
 interface IState {
   appInfo: {
@@ -102,6 +101,9 @@ function AppB() {
 }
 
 ```
+:::tip
+ [The Usage of Vue to bind Component](https://awesomedevin.github.io/zustand-vue/en/docs/introduce/start/zustand-vue#step-3-store-binds-the-component-and-its-done)
+:::
 
 ## API
 
@@ -161,6 +163,8 @@ import create from "zustand";
 
 const usePlatformStore = create(platformStore || {});
 ```
+
+
 
 
 
