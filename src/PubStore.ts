@@ -5,6 +5,10 @@ class PubStore{
   private StoreSymbol: symbol
   private target: any
   constructor(SymbolKey: string){
+    if(!SymbolKey)
+    {
+      throw new Error('Missing key parameter of PubStore')
+    }
     this.StoreSymbol = Symbol.for(SymbolKey)
     //@ts-ignore
     this.target = typeof window !== 'undefined' && window[this.StoreSymbol]
