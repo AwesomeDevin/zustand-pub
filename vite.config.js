@@ -1,4 +1,5 @@
 const _path = require('path')
+import commonjs from '@rollup/plugin-commonjs';
 
 export default {
   // 配置选项
@@ -6,6 +7,7 @@ export default {
     lib: {
       entry: [_path.resolve(__dirname, './src/index.ts')], // 设置入口文件
       name: 'zustand-pub', // 起个名字，安装、引入用
+      formats: ['es','cjs']
       // fileName: (format) => `nf-tool.${format}.js` // 打包后的文件名
     },
     // sourcemap: true, // 输出.map文件
@@ -18,5 +20,6 @@ export default {
       //   }
       // }
     }
-  }
+  },
+  plugins: [commonjs()]
 }

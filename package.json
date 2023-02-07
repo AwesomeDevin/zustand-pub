@@ -1,6 +1,6 @@
 {
   "name": "zustand-pub",
-  "version": "1.0.0-beta.6",
+  "version": "1.0.0-beta.7",
   "description": "Cross-Application/Cross-Framework State Management And Sharing based on zustand for React/Vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -31,10 +31,18 @@
   },
   "typesVersions": {
     "*": {
-      "react": ["./dist/typings/react.d.ts"],
-      "vue": ["./dist/typings/vue.d.ts"],
-      "dist/react.mjs": ["./dist/typings/react.d.ts"],
-      "dist/vue.mjs": ["./dist/typings/vue.d.ts"]
+      "react": [
+        "./dist/typings/react.d.ts"
+      ],
+      "vue": [
+        "./dist/typings/vue.d.ts"
+      ],
+      "dist/react.mjs": [
+        "./dist/typings/react.d.ts"
+      ],
+      "dist/vue.mjs": [
+        "./dist/typings/vue.d.ts"
+      ]
     }
   },
   "files": [
@@ -53,14 +61,14 @@
     "url": "https://github.com/AwesomeDevin/zustand-pub/issues"
   },
   "homepage": "https://github.com/AwesomeDevin/zustand-pub#readme",
-
   "peerDependencies": {
     "zustand": ">=4.1.4",
     "zustand-vue": ">=1.0.0-beta.6"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "typescript": "^4.9.3",
     "vite": "^4.0.4",
-    "zustand-vue": "^1.0.0-beta.6",
-    "typescript": "^4.9.3"
+    "zustand-vue": "^1.0.0-beta.6"
   }
 }
