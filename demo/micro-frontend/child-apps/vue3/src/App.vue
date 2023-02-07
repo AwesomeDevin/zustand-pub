@@ -12,7 +12,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import PubStore from "./store";
+import PubStore from "zustand-pub";
 import create from 'zustand-vue'
 
 const pub = new PubStore('micro-app')

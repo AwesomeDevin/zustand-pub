@@ -11,14 +11,14 @@
 
 <script>
 // import PubStore from "zustand-pub/dist/vue.mjs";
-import PubStore from "./store";
+import PubStore from "zustand-pub";
 
 import create from 'zustand-vue'
 
 const pub = new PubStore('micro-app')
 
 const store = pub.getStore("platformStore");
-const { useStore } = create(store);
+const useStore = create(store);
 
 
 const setAppName = useStore((state)=>state.setAppName)

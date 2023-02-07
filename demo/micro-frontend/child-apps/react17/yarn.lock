@@ -11461,10 +11461,10 @@ yocto-queue@^0.1.0:
   resolved "https://registry.nlark.com/yocto-queue/download/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha1-ApTrPe4FAo0x7hpfosVWpqrxChs=
 
-zustand-pub@1.0.0-beta.5:
-  version "1.0.0-beta.5"
-  resolved "https://registry.npmjs.org/zustand-pub/-/zustand-pub-1.0.0-beta.5.tgz#3452d3b30768e681aa6927bbb94d2af9fb1048b0"
-  integrity sha512-HFq6V9EzAH+TXyLx9asQnlXyfb3UzH4yipbetsgG77SsNUwKPttwMR9i42JDl8ZGD077DZqb7ZBWAS1marnOyQ==
+zustand-pub@^1.0.0-beta.7:
+  version "1.0.0-beta.7"
+  resolved "https://registry.npmjs.org/zustand-pub/-/zustand-pub-1.0.0-beta.7.tgz#e6e3883cdc394158cac77d5d535fc5167d0a6505"
+  integrity sha512-ZNM3fdHPc9LPcTgTS+hx1v5EUHMMD+PssQJ3rfzVT0akxplpA+ekW5FuKVVkLBKKcnmhuotF6KgIO3eSdnGNcA==
 
 zustand@^4.3.2:
   version "4.3.2"

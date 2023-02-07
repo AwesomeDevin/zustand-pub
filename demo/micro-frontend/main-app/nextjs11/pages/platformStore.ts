@@ -1,6 +1,6 @@
 // import ReactPubStore from 'zustand-pub/react'
 import { create } from 'zustand'
-import ReactPubStore from './store'
+import ReactPubStore from 'zustand-pub'
 
 
 console.log('ReactPubStore',ReactPubStore)
