@@ -4,7 +4,7 @@ export default {
   // 配置选项
   build: {
     lib: {
-      entry: [_path.resolve(__dirname, './src/index.ts'),_path.resolve(__dirname, './src/vue.ts'),_path.resolve(__dirname, './src/react.ts')], // 设置入口文件
+      entry: [_path.resolve(__dirname, './src/index.ts')], // 设置入口文件
       name: 'zustand-pub', // 起个名字，安装、引入用
       // fileName: (format) => `nf-tool.${format}.js` // 打包后的文件名
     },

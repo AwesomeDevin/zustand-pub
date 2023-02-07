@@ -1,7 +1,7 @@
 {
   "name": "zustand-pub",
-  "version": "1.0.0-beta.5",
-  "description": "State management for cross-application based on zustand",
+  "version": "1.0.0-beta.6",
+  "description": "Cross-Application/Cross-Framework State Management And Sharing based on zustand for React/Vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx vite build && npx tsc --emitDeclarationOnly"

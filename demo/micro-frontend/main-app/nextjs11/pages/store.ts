@@ -1,57 +1,55 @@
-import create from 'zustand'
-import store, { StateCreator, StoreApi } from 'zustand/vanilla'
+import store, { StateCreator, StoreApi, StoreMutatorIdentifier } from 'zustand/vanilla'
 
 
-
-const SymbolKey = 'STORE'
-const StoreSymbol = Symbol.for(SymbolKey)
-
-export function defineStore<T>(key: string, fn: StateCreator<T, [], [], T>) {
-  if (!key) return create(fn)
-
-  const Store = store(fn)
-  if (typeof window !== 'undefined') {
+class PubStore{
+  StoreSymbol: symbol
+  target: any
+  constructor(SymbolKey: string){
+    this.StoreSymbol = Symbol.for(SymbolKey)
     //@ts-ignore
-    window[StoreSymbol] = {
-      [key]: Store,
-      //@ts-ignore
-      ...(window[StoreSymbol] || {}),
+    this.target = typeof window !== 'undefined' && window[this.StoreSymbol]
+    if(this.target){
+      return this.target.pubStore
     }
   }
 
-
-  return create(Store)
-}
-
-export function getStore<T>(key: string): StoreApi<T> {
-  //@ts-ignore
-  return window[StoreSymbol][key]
-}
-
-class PubStore{
-  StoreSymbol: Symbol
-  constructor(SymbolKey: string){
-    this.StoreSymbol = Symbol.for(SymbolKey)
-  }
-
-  defineStore<T>(key: string, fn: StateCreator<T, [], [], T>) {
-    if (!key) return create(fn)
+  defineStore<T extends object,Mos extends [StoreMutatorIdentifier, unknown][] = []>(key: string, fn: StateCreator<T, [], Mos>) {
+    
+    if (!key) return store(fn)
   
-    const Store = store(fn)
-    if (typeof window !== 'undefined') {
+    let Store: StoreApi<T>
+    if(this.target){
+      const oldStore = this.target[key].value
+      const newFnValue = fn(oldStore.setState, oldStore.getState, oldStore)
+      // extend oldStore
+      oldStore.setState((state: any)=>({
+        ...newFnValue,
+        ...state
+      }))
+      Store = oldStore
+    }else{
+      Store = store(fn)
+    }
+  
+    if(typeof window !== 'undefined'){
       //@ts-ignore
       window[this.StoreSymbol] = {
-        [key]: Store,
+        [key]: {
+          value: Store,
+          pubStore: this,
+          fn,
+        },
         //@ts-ignore
         ...(window[this.StoreSymbol] || {}),
       }
     }
-    return create(Store)
+    return Store
   }
 
   getStore<T>(key: string): StoreApi<T> {
     //@ts-ignore
-    return window[this.StoreSymbol] && window[this.StoreSymbol][key]
+    const res = this.target && this.target[key].value
+    return res || store(()=>({}))
   }
 }
 

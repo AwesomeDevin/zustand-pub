@@ -8,18 +8,50 @@ import {
   useHistory,
 } from "react-router-dom";
 import Home from "./pages/home/home";
-import ReactPubStore from "zustand-pub/dist/react.mjs";
+// import ReactPubStore from "zustand-pub/dist/react.mjs";
+import ReactPubStore from './store'
 import create from "zustand";
 
+interface IState {
+  appInfo: {
+    name: string
+  }
+  value: number,
+}
 
-const pub = new ReactPubStore('micro-app')
-const store = pub.getStore<{
-  setAppName: (val: string) => void;
-  setValue: (val: number) => void;
-  value: number;
-}>("platformStore");
+interface IAction {
+  setAppName: (val: string) => void
+  setValue: (val: number) => void
+}
 
-const useStore = create(store || {});
+const Pub = new ReactPubStore('micro-app')
+
+const pubStore = Pub.defineStore<IState & IAction>('platformStore', (set) => ({
+  appInfo: { name: '' },
+  value: 1,
+  setAppName(val: string) {
+    set({
+      appInfo: {
+        name: val
+      }
+    })
+  },
+  setValue(val: number) {
+    set({
+      value: val
+    })
+  }
+}))
+// const pubStore = Pub.getStore<{
+//   setAppName: (val: string) => void;
+//   setValue: (val: number) => void;
+//   value: number;
+// }>("platformStore");
+
+const useStore = create(pubStore || {});
+
+
+console.log('useStore',useStore.getState())
 
 const Page2 = lazy(
   () => import(/* webpackChunkName: "page2" */ "./pages/page2/page2")

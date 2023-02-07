@@ -10,14 +10,15 @@
 </template>
 
 <script>
-import PubStore from "zustand-pub/dist/vue.mjs";
+// import PubStore from "zustand-pub/dist/vue.mjs";
+import PubStore from "./store";
+
 import create from 'zustand-vue'
 
 const pub = new PubStore('micro-app')
 
 const store = pub.getStore("platformStore");
 const { useStore } = create(store);
-console.log('store',store, useStore)
 
 
 const setAppName = useStore((state)=>state.setAppName)
@@ -27,7 +28,12 @@ export default {
   name: 'App',
   data() {
     return  {
-      value: useStore((state)=>state.value) 
+      store: useStore() 
+    }
+  },
+  computed:{
+    value(){
+      return this.store.value
     }
   },
   methods: {

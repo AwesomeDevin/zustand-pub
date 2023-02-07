@@ -1,7 +1,3 @@
-import ReactPubStore from './react'
-import VuePubStore from './vue'
+import PubStore from './PubStore'
 
-export {
-  ReactPubStore,
-  VuePubStore
-}
+export default PubStore
