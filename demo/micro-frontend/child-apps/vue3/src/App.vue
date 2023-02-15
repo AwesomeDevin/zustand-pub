@@ -9,8 +9,10 @@
   </div>
 </template>
 
+
 <script lang="ts">
 import { defineComponent } from 'vue'
+
 
 import PubStore from "zustand-pub";
 import create from 'zustand-vue'
@@ -19,17 +21,17 @@ const pub = new PubStore('micro-app')
 const store = pub.getStore<{ setAppName: (val: string) => void }>("platformStore");
 
 
-const { useStore } = create(store);
+const useStore = create(store);
 
-const setAppName = useStore((state: any)=>state.setAppName)
-const setValue = useStore((state: any)=>state.setValue)
+const setAppName = useStore((state)=>state.setAppName)
+const setValue = useStore((state)=>state.setValue)
 
 
 export default defineComponent({
   name: 'App',
   data() {
     return  {
-      value: useStore((state: any)=>state.value as number) 
+      value: useStore((state)=>state.value as number) 
     }
   },
   methods: {

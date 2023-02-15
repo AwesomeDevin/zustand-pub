@@ -9507,10 +9507,10 @@ zustand-pub@^1.0.0-beta.7:
   resolved "https://registry.npmjs.org/zustand-pub/-/zustand-pub-1.0.0-beta.7.tgz#e6e3883cdc394158cac77d5d535fc5167d0a6505"
   integrity sha512-ZNM3fdHPc9LPcTgTS+hx1v5EUHMMD+PssQJ3rfzVT0akxplpA+ekW5FuKVVkLBKKcnmhuotF6KgIO3eSdnGNcA==
 
-zustand-vue@^1.0.0-beta.5:
-  version "1.0.0-beta.5"
-  resolved "https://registry.npmjs.org/zustand-vue/-/zustand-vue-1.0.0-beta.5.tgz#37770d00824b2f93130d11d10d1f743c76c80425"
-  integrity sha512-hB5Z7DCAtrLWKI7wX5yEFMX4+vAD7Z/9obkfgFfnv8OgECqkRZkvnXp7fB8m1b65w7/I1V9bbMfO+Q9yBSSaZQ==
+zustand-vue@1.0.0-beta.16:
+  version "1.0.0-beta.16"
+  resolved "https://registry.npmjs.org/zustand-vue/-/zustand-vue-1.0.0-beta.16.tgz#7ccae63940696faf5e8b495d4f85dda7b0001e6a"
+  integrity sha512-AslLHie1xHQqjlDjcB01MakoP9ZH19qyQPX0AFjpVvFTkaeDGz+ws8MUiQid2WCo25e5UZHgCfAdPBBzs8s+GQ==
   dependencies:
     zustand "^4.1.4"
 
