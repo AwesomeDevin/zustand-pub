@@ -51,9 +51,12 @@
   "keywords": [
     "zustand",
     "zustand-vue",
-    "state-share",
+    "state sharing",
+    "state management",
     "micro-frontend",
-    "modularization"
+    "modularization",
+    "react",
+    "vue"
   ],
   "author": "AwesomeDevin",
   "license": "MIT",
