@@ -2,22 +2,21 @@
 [![Version](https://img.shields.io/npm/v/zustand-pub?style=flat)](https://www.npmjs.com/package/zustand-pub)
 
 :::tip
-<details>
-<summary>Iframe</summary>
+<details open>
+<summary>Iframe.gif</summary>
 
-![](./public/zustand-pub-iframe.gif)
+![](https://raw.githubusercontent.com/AwesomeDevin/zustand-pub/main/public/zustand-pub-iframe.gif)
 </details>
 
 ### [Iframe Demo Source](https://github.com/AwesomeDevin/zustand-pub/tree/main/demo/iframe)
 
 <details>
-<summary>Micro-Frontend</summary>
+<summary>Micro-Frontend.gif</summary>
 
-![](./public/zustand-pub-micro-app.gif)
+![](https://raw.githubusercontent.com/AwesomeDevin/zustand-pub/main/public/zustand-pub-micro-app.gif)
 </details>
 
 ### [Micro-FrontEnd Demo Source](https://github.com/AwesomeDevin/zustand-pub/tree/main/demo/micro-frontend)
-
 
 :::
 
