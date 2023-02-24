@@ -2,7 +2,6 @@
 
 #app {
   margin: 0 auto;
-  padding: 2rem;
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
@@ -18,7 +17,7 @@ a,
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    /* background-color: hsla(160, 100%, 37%, 0.2); */
   }
 }
 

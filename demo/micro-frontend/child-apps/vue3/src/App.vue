@@ -18,7 +18,7 @@ import PubStore from "zustand-pub";
 import create from 'zustand-vue'
 
 const pub = new PubStore('micro-app')
-const store = pub.getStore<{ setAppName: (val: string) => void }>("platformStore");
+const store = pub.getStore<{ setAppName: (val: string) => void, value: number, setValue: (val: number) => void }>("platformStore");
 
 
 const useStore = create(store);
@@ -31,7 +31,7 @@ export default defineComponent({
   name: 'App',
   data() {
     return  {
-      value: useStore((state)=>state.value as number) 
+      value: useStore((state)=>state.value) 
     }
   },
   methods: {
@@ -44,7 +44,7 @@ export default defineComponent({
       }
     },
     reduce(){
-      // console.log(this.value)
+      console.log(this.value)
       setValue(this.value - 1)
       // this.value = this.value - 1
     }

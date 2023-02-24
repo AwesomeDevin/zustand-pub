@@ -50,7 +50,6 @@ const pubStore = Pub.defineStore<IState & IAction>('platformStore', (set) => ({
 const useStore = create(pubStore || {});
 
 
-console.log('useStore',useStore.getState())
 
 const Page2 = lazy(
   () => import(/* webpackChunkName: "page2" */ "./pages/page2/page2")
@@ -86,9 +85,7 @@ function App() {
       window.microApp.setGlobalData({ name: window.__MICRO_APP_NAME__ });
     }
   }
-  //@ts-ignore
   const setValue = useStore((state) => state.setValue);
-  //@ts-ignore
   const value = useStore((state) => state.value);
 
   return (

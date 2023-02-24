@@ -1,13 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import VueView from '../views/Vue.vue'
+import Header from '../views/Header.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
+      path: '/vue',
       name: 'Vue',
       component: VueView
+    },
+    {
+      path: '/',
+      name: 'Header',
+      component: Header,
     },
     {
       path: '/react',

@@ -1,11 +1,15 @@
+<script setup lang="ts">
+import usePlatformStore from "../platformStore";
+
+const setAppName = usePlatformStore(state=>state.setAppName)
+
+setAppName('React App')
+</script>
+
 <template>
-    <iframe src="http://localhost:5175" />
+    react页面
 </template>
 
 <style>
-iframe{
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
+
 </style>

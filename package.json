@@ -1,6 +1,6 @@
 {
   "name": "zustand-pub",
-  "version": "1.0.0-beta.9",
+  "version": "1.0.0-beta.10",
   "description": "Cross-Application/Cross-Framework State Management And Sharing based on zustand for React/Vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -66,12 +66,12 @@
   "homepage": "https://github.com/AwesomeDevin/zustand-pub#readme",
   "peerDependencies": {
     "zustand": ">=4.1.4",
-    "zustand-vue": ">=1.0.0-beta.12"
+    "zustand-vue": ">=1.0.0-beta.19"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.1",
     "typescript": "^4.9.3",
     "vite": "^4.0.4",
-    "zustand-vue": "1.0.0-beta.12"
+    "zustand-vue": "1.0.0-beta.19"
   }
 }

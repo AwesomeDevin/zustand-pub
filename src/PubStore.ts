@@ -1,52 +1,77 @@
 import store, { StateCreator, StoreApi, StoreMutatorIdentifier } from 'zustand/vanilla'
+// import IframeListener from './IframeListener'
 
+
+interface IUnit<T extends object = any, Mos extends [StoreMutatorIdentifier, unknown][] = []> {
+  value: StoreApi<T>,
+  pubStore: PubStore,
+  fn: StateCreator<T, [], Mos>
+}
+
+declare global {
+  interface Window {[key: symbol] : { [key: string]: IUnit } }
+}
 
 class PubStore{
-  private StoreSymbol: symbol
-  private target: any
-  constructor(SymbolKey: string){
-    if(!SymbolKey)
+  private storeSymbol: symbol
+  private target: { [key: string]: IUnit }
+  private w: Window
+  constructor(symbolKey: string){
+    if(!symbolKey)
     {
-      throw new Error('Missing key parameter of PubStore')
+      throw new Error('Missing key of PubStore')
     }
-    this.StoreSymbol = Symbol.for(SymbolKey)
-    //@ts-ignore
-    this.target = typeof window !== 'undefined' && window[this.StoreSymbol]
+    try{
+      this.w = window.top 
+    }catch(e){
+      console.error(e)
+      this.w = window
+    }
+    this.storeSymbol = Symbol.for(symbolKey)
+    this.target = typeof window !== 'undefined' && this.w.top[this.storeSymbol]
+
+    // new IframeListener(symbolKey)
+
     if(this.target){
-      return this.target.pubStore
+      const keys = Object.keys(this.target)
+      return this.target[keys[0]].pubStore
     }
+    
   }
 
   defineStore<T extends object,Mos extends [StoreMutatorIdentifier, unknown][] = []>(key: string, fn: StateCreator<T, [], Mos>) {
     
-    if (!key) return store(fn)
+    if (!key){
+      return store(fn)
+    }
   
     let Store: StoreApi<T>
-    if(this.target){
+    if(this.target && this.target[key].value){
       const oldStore = this.target[key].value
       const newFnValue = fn(oldStore.setState, oldStore.getState, oldStore)
       // extend oldStore
       oldStore.setState((state: any)=>({
         ...newFnValue,
-        ...state
+        ...state,
       }))
       Store = oldStore
-    }else{
+    } else {
       Store = store(fn)
     }
   
     if(typeof window !== 'undefined'){
       //@ts-ignore
-      window[this.StoreSymbol] = {
+      this.w.top[this.storeSymbol] = {
+        ...(this.w.top[this.storeSymbol] || {}),
         [key]: {
           value: Store,
           pubStore: this,
           fn,
         },
-        //@ts-ignore
-        ...(window[this.StoreSymbol] || {}),
       }
+      this.target = this.w.top[this.storeSymbol]
     }
+    
     return Store
   }
 

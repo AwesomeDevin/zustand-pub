@@ -1,11 +1,43 @@
+<script setup lang="ts">
+import usePlatformStore from "../platformStore";
+
+const value = usePlatformStore(state=>state.value)
+const setAppName = usePlatformStore(state=>state.setAppName)
+const setValue = usePlatformStore(state=>state.setValue)
+
+function handleChange(e){
+  setValue(e.target.value)
+}
+
+console.log('setAppName',setAppName)
+
+setAppName('Vue')
+
+
+if(!value.value){
+  setValue("It's pretty useful ~")
+}
+
+</script>
+
 <template>
-  <iframe src="http://localhost:5174" />
+    <div className="con"> 
+      <img alt="Vue logo" class="logo" src="../assets/logo.svg" width="125" height="125" />
+      <a-row :gutter="8">
+        <a-input :value="value" @input="handleChange"  />
+      </a-row>
+    </div>
+   
 </template>
 
 <style>
-iframe{
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
+  .con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex:1
+  }
+  img{
+    margin: 14px;
+  }
 </style>
