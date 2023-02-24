@@ -7,7 +7,7 @@
 
 ### Ability
 
-It is suitable for business scenarios such as `iframe`, `micro-frontend`, `modularization`, `componentization`, `multiple technology stacks exist at the same time`, and `gradual migration of project frameworks`, `zustand-pub` can provides cross-application and cross-framework state management and sharing capabilities for these scenarios.
+`zustand-pub` can provides cross-application and cross-framework `state management and sharing` capabilities for these scenarios, such as `iframe`, `micro-frontend`, `modularization`, `componentization`, `multiple technology stacks exist at the same time`, and `gradual migration of project frameworks`.
 
 
 ### Install
