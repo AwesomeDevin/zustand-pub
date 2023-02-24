@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 // import PubStore from "zustand-pub/dist/vue.mjs";
 import PubStore from "zustand-pub";
 
@@ -17,9 +17,8 @@ import create from 'zustand-vue'
 
 const pub = new PubStore('micro-app')
 
-const store = pub.getStore<{ setAppName: (val: string) => void, value: number, setValue: (val: number) => void }>("platformStore");
+const store = pub.getStore("platformStore");
 
-console.log('PubStore', pub)
 const useStore = create(store);
 
 

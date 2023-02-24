@@ -2,14 +2,29 @@
 [![Version](https://img.shields.io/npm/v/zustand-pub?style=flat)](https://www.npmjs.com/package/zustand-pub)
 
 :::tip
+<details>
+<summary>Iframe</summary>
+
+![](./public/zustand-pub-iframe.gif)
+</details>
+
 ### [Iframe Demo Source](https://github.com/AwesomeDevin/zustand-pub/tree/main/demo/iframe)
+
+<details>
+<summary>Micro-Frontend</summary>
+
+![](./public/zustand-pub-micro-app.gif)
+</details>
+
 ### [Micro-FrontEnd Demo Source](https://github.com/AwesomeDevin/zustand-pub/tree/main/demo/micro-frontend)
+
+
 :::
+
 
 ### Ability
 
 `zustand-pub` can provides cross-application and cross-framework `state management and sharing` capabilities for these scenarios, such as `iframe`, `micro-frontend`, `modularization`, `componentization`, `multiple technology stacks exist at the same time`, and `gradual migration of project frameworks`.
-
 
 ### Install
 ```shell

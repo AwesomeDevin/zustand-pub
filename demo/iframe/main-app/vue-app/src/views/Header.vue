@@ -21,8 +21,6 @@ const iframeSwitch = usePlatformStore(state=>state.iframeSwitch)
   // //   // setIframeSwitch('http://localhost:5173/vue')
   // // }
 // })
-console.log('name',name)
-console.log(iframeSwitch,iframeSwitch)
 
 
 
@@ -36,13 +34,12 @@ export default{
   },
 
   methods: {
-    handleClick(e){
-      this.selectedKeys.slice(1,1, e.key)
+    handleClick(e: any){
+      this.selectedKeys.splice(1,1, e.key as string)
     }
   },
   watch:{
     selectedKeys(val){
-      console.log('val',val)
       if(val.includes('vue')){
          setIframeSwitch('vue')
       }else{

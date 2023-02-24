@@ -9,7 +9,6 @@ function handleChange(e){
   setValue(e.target.value)
 }
 
-console.log('setAppName',setAppName)
 
 setAppName('Vue')
 

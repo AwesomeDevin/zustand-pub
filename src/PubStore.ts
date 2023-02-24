@@ -22,13 +22,12 @@ class PubStore{
       throw new Error('Missing key of PubStore')
     }
     try{
-      this.w = window.top 
+      this.w = typeof window !== 'undefined' && window.top 
     }catch(e){
-      console.error(e)
-      this.w = window
+      this.w = typeof window !== 'undefined' && window
     }
     this.storeSymbol = Symbol.for(symbolKey)
-    this.target = typeof window !== 'undefined' && this.w.top[this.storeSymbol]
+    this.target = this.w ? this.w[this.storeSymbol] : undefined
 
     // new IframeListener(symbolKey)
 
