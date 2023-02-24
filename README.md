@@ -2,7 +2,8 @@
 [![Version](https://img.shields.io/npm/v/zustand-pub?style=flat)](https://www.npmjs.com/package/zustand-pub)
 
 :::tip
-### [Micro-FrontEnd Demo Source](https://github.com/AwesomeDevin/zustand-pub)
+### [Iframe Demo Source](https://github.com/AwesomeDevin/zustand-pub/tree/main/demo/iframe)
+### [Micro-FrontEnd Demo Source](https://github.com/AwesomeDevin/zustand-pub/tree/main/demo/micro-frontend)
 :::
 
 ### Ability
