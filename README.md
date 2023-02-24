@@ -1,5 +1,10 @@
+# zustand-pub
 [![Build Size](https://img.shields.io/bundlephobia/minzip/zustand-pub?label=bundle%20size)](https://bundlephobia.com/result?p=zustand-pub)
 [![Version](https://img.shields.io/npm/v/zustand-pub?style=flat)](https://www.npmjs.com/package/zustand-pub)
+
+
+`zustand-pub` can provides cross-application and cross-framework `state management and sharing` capabilities for these scenarios, such as `iframe`, `micro-frontend`, `modularization`, `componentization`, `multiple technology stacks exist at the same time`, and `gradual migration of project frameworks`.
+
 
 :::tip
 <details open>
@@ -19,11 +24,6 @@
 ### [Micro-FrontEnd Demo Source](https://github.com/AwesomeDevin/zustand-pub/tree/main/demo/micro-frontend)
 
 :::
-
-
-### Ability
-
-`zustand-pub` can provides cross-application and cross-framework `state management and sharing` capabilities for these scenarios, such as `iframe`, `micro-frontend`, `modularization`, `componentization`, `multiple technology stacks exist at the same time`, and `gradual migration of project frameworks`.
 
 ### Install
 ```shell
