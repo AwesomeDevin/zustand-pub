@@ -12,6 +12,7 @@ export default defineConfig({
     }
   },
   server: {
+    open: true,
     proxy: {
       '/react': {
         target: 'http://localhost:5175',

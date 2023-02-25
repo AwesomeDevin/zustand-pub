@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { ref, watch } from 'vue'
 import usePlatformStore from "../platformStore";
 import Iframe from '../views/Iframe.vue';
@@ -6,54 +6,54 @@ import Iframe from '../views/Iframe.vue';
 const name = usePlatformStore(state=>state.appInfo.name)
 const value = usePlatformStore(state=>state.value)
 const setIframeSwitch = usePlatformStore(state=>state.setIframeSwitch)
-const iframeSwitch = usePlatformStore(state=>state.iframeSwitch)
+// const iframeSwitch = usePlatformStore(state=>state.iframeSwitch)
 
 
-// const selectedKeys = ref<string[]>(['vue']);
-// const handleClick = (e: Event) => {
-//   selectedKeys.value = [e.key]
-// };
-// watch(selectedKeys, (val)=>{
-//   console.log('watch selectedKeys',val.includes('vue'))
-  // // if(selectedKeys.value.includes('vue')){
-  //   setIframeSwitch('http://localhost:5173/vue')
-  // // }else{
-  // //   // setIframeSwitch('http://localhost:5173/vue')
-  // // }
-// })
-
-
-
-export default{
-  name: "Header",
-  data(){
-    return {
-      selectedKeys: ['vue'],
-      name,value
-    }
-  },
-
-  methods: {
-    handleClick(e: any){
-      this.selectedKeys.splice(1,1, e.key as string)
-    }
-  },
-  watch:{
-    selectedKeys(val){
-      if(val.includes('vue')){
-         setIframeSwitch('vue')
-      }else{
-        setIframeSwitch('react')
-      }
-    }
-  },
-  components: {
-    Iframe
-  },
-  mounted(){
-    setIframeSwitch('vue')
+const selectedKeys = ref<string[]>(['vue']);
+const handleClick = (e: Event) => {
+  selectedKeys.value.splice(1,1, e.key as string)
+};
+watch(selectedKeys, (val)=>{
+  if(val.includes('vue')){
+      setIframeSwitch('vue')
+  }else{
+    setIframeSwitch('react')
   }
-}
+})
+setIframeSwitch('vue')
+
+
+
+// export default{
+//   name: "Header",
+//   data(){
+//     return {
+//       selectedKeys: ['vue'],
+//       name,value
+//     }
+//   },
+
+//   methods: {
+//     handleClick(e: any){
+//       this.selectedKeys.splice(1,1, e.key as string)
+//     }
+//   },
+//   watch:{
+//     selectedKeys(val){
+//       if(val.includes('vue')){
+//          setIframeSwitch('vue')
+//       }else{
+//         setIframeSwitch('react')
+//       }
+//     }
+//   },
+//   components: {
+//     Iframe
+//   },
+//   mounted(){
+//     setIframeSwitch('vue')
+//   }
+// }
 
 </script>
 <template>

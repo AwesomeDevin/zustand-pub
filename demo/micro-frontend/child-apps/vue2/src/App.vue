@@ -2,7 +2,7 @@
   <div id="vue2-app">
     <div><button @click="reduce">Reduce in ChildApp - Vue2</button></div>
     <div id='public-links' @click="onRouteChange">
-      <router-link to="/">Home</router-link> |
+      <router-link to="/">Home1</router-link> |
       <router-link to="/page2">Page2</router-link>
     </div>
     <router-view />
