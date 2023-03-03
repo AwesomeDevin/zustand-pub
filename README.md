@@ -2,8 +2,12 @@
 [![Build Size](https://img.shields.io/bundlephobia/minzip/zustand-pub?label=bundle%20size)](https://bundlephobia.com/result?p=zustand-pub)
 [![Version](https://img.shields.io/npm/v/zustand-pub?style=flat)](https://www.npmjs.com/package/zustand-pub)
 
+`zustand-pub` can provides cross-application and cross-framework `state management and sharing` capabilities for these scenarios, such as `iframe`, `micro-frontend`, `modularization`, `componentization`, `multiple technology stacks exist at the same time`, and `gradual migration of project frameworks`.
 
-`zustand-pub` can provides cross-application and cross-framework `state management and sharing` capabilities for these scenarios, such as `iframe`, `micro-frontend`,`module Federation`, `modularization`, `componentization`, `multiple technology stacks exist at the same time`, and `gradual migration of project frameworks`.
+## Why do you need zustand-pub ？
+1. Applications/components can `mutually call/modify state` and `trigger component rendering`, no need for postMessage or other event communication mechanisms。
+2. `State can be cached` between applications/components, including iframes, micro frontends, etc.
+3. Based on devtools, you can `debug/trace stores between multiple applications at the same time`, which can greatly reduce the difficulty of debugging when communicating between applications.
 
 ### [Official Document](https://awesomedevin.github.io/zustand-vue/en/)
 
@@ -25,15 +29,6 @@
 ### [Micro-FrontEnd Demo Source](https://github.com/AwesomeDevin/zustand-pub/tree/main/demo/micro-frontend)
 
 :::
-
-## Introduce
-
-`zustand-pub` can provides cross-application and cross-framework `state management and sharing` capabilities for these scenarios, such as `iframe`, `micro-frontend`, `modularization`, `componentization`, `multiple technology stacks exist at the same time`, and `gradual migration of project frameworks`.
-
-## Why do you need zustand-pub ？
-1. Applications/components can `mutually call/modify state` and `trigger component rendering`, no need for postMessage or other event communication mechanisms。
-2. `State can be cached` between applications/components, including iframes, micro frontends, etc.
-3. Based on devtools, you can `debug/trace stores between multiple applications at the same time`, which can greatly reduce the difficulty of debugging when communicating between applications.
 
 ## Install
 ```shell
