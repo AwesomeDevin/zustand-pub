@@ -7,7 +7,7 @@
 
 ### [Official Document](https://awesomedevin.github.io/zustand-vue/en/)
 
-:::tip
+:::note
 <details open>
 <summary>Iframe.gif</summary>
 
@@ -26,7 +26,16 @@
 
 :::
 
-### Install
+## Introduce
+
+`zustand-pub` can provides cross-application and cross-framework `state management and sharing` capabilities for these scenarios, such as `iframe`, `micro-frontend`, `modularization`, `componentization`, `multiple technology stacks exist at the same time`, and `gradual migration of project frameworks`.
+
+## Why do you need zustand-pub ？
+1. Applications/components can `mutually call/modify state` and `trigger component rendering`, no need for postMessage or other event communication mechanisms。
+2. `State can be cached` between applications/components, including iframes, micro frontends, etc.
+3. Based on devtools, you can `debug/trace stores between multiple applications at the same time`, which can greatly reduce the difficulty of debugging when communicating between applications.
+
+## Install
 ```shell
 npm install zustand-pub # or yarn add zustand-pub
 ```
@@ -107,7 +116,7 @@ export default {
 
 ### Step 3： Get the `platformStore` under the isolated container `pubStore` and bind the Component (Scene B)
 ```js
-// vue
+// vue3
 <template>
   <div>{name}</div>
 </template>
@@ -150,9 +159,10 @@ const setAppName = usePlatformStore((state) => state.setAppName);
 //  return <div>{name}</div>
 // }
 ```
-:::tip
- [The Usage of React to bind Component](https://awesomedevin.github.io/zustand-vue/en/docs/introduce/start/zustand#step-3-store-binds-the-component-and-its-done)
- [The Usage of Vue to bind Component](https://awesomedevin.github.io/zustand-vue/en/docs/introduce/start/zustand-vue#step-3-store-binds-the-component-and-its-done)
+:::info
+ [The Usage of React to bind Component](/docs/introduce/start/zustand#step-3-store-binds-the-component-and-its-done) 
+    
+ [The Usage of Vue to bind Component](/docs/introduce/start/zustand-vue#step-3-store-binds-the-component-and-its-done)
 :::
 
 ## API
@@ -160,7 +170,7 @@ const setAppName = usePlatformStore((state) => state.setAppName);
 ### PubStore(str) 
 Used to create state isolation containers, the data `key` inside different isolation containers can have the same name and do not affect each other
 
-:::tip
+:::info
  In the same application, `key` is unchanged and the `pubStore` is returned unchanged
 :::
 
@@ -171,10 +181,10 @@ const pubStore = new PubStore()
 ### defineStore(key,fn)
 Used to fill data into isolated containers
 
-:::tip
+:::info
  In the same application, `key` is unchanged and the defined `store` will be merged in the order of loading
 
- that is `defineStore(key,()=>({a:1})) defineStore(key,()=>({b:2}))` works like `defineStore(key,()=>({a:1,b:2}))`
+ that is `defineStore(key,()=>({a:1,c:1})) defineStore(key,()=>({b:2,c:2}))` works like `defineStore(key,()=>({a:1,b:2,c:1}))`
 :::
 
 Parameter | Desc | Type 
@@ -213,6 +223,7 @@ import create from "zustand";
 
 const usePlatformStore = create(platformStore || {});
 ```
+
 
 
 
