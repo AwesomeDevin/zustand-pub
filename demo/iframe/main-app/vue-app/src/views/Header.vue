@@ -71,8 +71,8 @@ setIframeSwitch('vue')
     </a-menu>
     <div class="main">
       <header>
-          <h1>Title: You are currently under <span :style="{color: 'red'}">{{ name }}  Iframe !!!</span> </h1>
-          <h2>Desc: {{ value }}</h2>
+          <h1>Parent Title: You are currently under <span :style="{color: 'red'}">{{ name }}  Iframe !!!</span> </h1>
+          <h2>Parent Desc: {{ value }}</h2>
       </header>
       <RouterView />
       <Iframe />

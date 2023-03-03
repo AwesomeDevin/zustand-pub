@@ -1,7 +1,7 @@
 // import ReactPubStore from 'zustand-pub/react'
 import { create } from 'zustand'
 import PubStore from 'zustand-pub'
-
+import { devtools, persist, createJSONStorage } from 'zustand/middleware'
 
 interface IState {
   appInfo: {
@@ -36,5 +36,6 @@ const pubStore = Pub.defineStore<IState & IAction>('platformStore', (set, get, s
 })})
 
 const usePlatformStore = create(pubStore)
+
 
 export default usePlatformStore

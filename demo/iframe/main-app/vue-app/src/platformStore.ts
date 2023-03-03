@@ -1,5 +1,7 @@
 import create from 'zustand-vue'
 import PubStore from 'zustand-pub'
+import { devtools } from 'zustand/middleware'
+
 
 interface IState {
   appInfo: {
@@ -18,7 +20,7 @@ interface IAction {
 
 export const Pub = new PubStore('iframe')
 
-const pubStore = Pub.defineStore<IState & IAction>('platformStore', (set) => {
+const platformStore = Pub.defineStore<IState & IAction,[["zustand/devtools", IState & IAction]]>('platformStore', devtools((set) => {
   return ({
   appInfo: { name: '' },
   value: '',
@@ -41,8 +43,17 @@ const pubStore = Pub.defineStore<IState & IAction>('platformStore', (set) => {
       value: val
     })
   }
-})})
+})},{
+  name: 'PlatformStore'
+}))
 
-const usePlatformStore = create(pubStore)
+
+// method1
+// const usePlatformStore = create(Pub.getStore('platformStore'))
+
+
+// method2
+const usePlatformStore = create(platformStore)
+
 
 export default usePlatformStore

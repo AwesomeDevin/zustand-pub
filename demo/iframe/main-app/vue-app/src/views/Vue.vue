@@ -23,7 +23,9 @@ if(!value.value){
     <div className="con"> 
       <img alt="Vue logo" class="logo" src="../assets/logo.svg" width="125" height="125" />
       <a-row :gutter="8">
-        <a-input :value="value" @input="handleChange"  />
+        <label>
+          Parent Desc &nbsp; <a-input :value="value" @input="handleChange"  />
+        </label>
       </a-row>
     </div>
    
@@ -37,6 +39,17 @@ if(!value.value){
     flex:1
   }
   img{
+    height: 30vmin;
     margin: 14px;
+  }
+  label{
+    font-size: 20px; 
+    line-height: 40px; 
+  }
+  .con .ant-input {
+    width: 220px;
+    font-size: 20px; 
+    line-height: 40px; 
+    text-indent: 10px;
   }
 </style>

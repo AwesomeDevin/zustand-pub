@@ -2,23 +2,22 @@ import logo from './logo.svg';
 import './App.css';
 import { useCallback, useEffect } from 'react'
 
-import PubStore from 'zustand-pub'
-import { create } from 'zustand';
+// First method 
+import usePlatformStore from './platformStore'
 
 
 
+// Anthor method to create usePlatformStore
 
-const pub = new PubStore('iframe')
+// import PubStore from 'zustand-pub'
+// import { create } from 'zustand';
 
-const platformStore = pub.getStore('platformStore')
-
-console.log('platformStore',platformStore.getState())
-const usePlatformStore = create(platformStore)
+// const pub = new PubStore('iframe')
+// const platformStore = pub.getStore('platformStore')
+// const usePlatformStore = create(platformStore)
 
 
 const options = ["It's pretty useful ~","I like it ~"]
-
-
 
 
 function App() {
@@ -26,7 +25,7 @@ function App() {
   const value = usePlatformStore(state=>state.value)
   const setAppName = usePlatformStore(state=>state.setAppName)
   const setValue = usePlatformStore(state=>state.setValue)
-  
+  const title = usePlatformStore(state=>state.reactAppState.title)
 
   useEffect(()=>{
     setAppName('React')
@@ -44,6 +43,7 @@ function App() {
           options.map(option=><label style={{color: '#000'}} key={option}><input type="radio" name="text" defaultChecked={value === option} onClick={()=>{handleChange(option)}} value={option} />{option}</label>)
         }
       </header>
+      <section><input style={{width: 350, fontSize: 20, lineHeight: '40px', textIndent: 10}} defaultValue={title}  /></section>
     </div>
   );
 }
