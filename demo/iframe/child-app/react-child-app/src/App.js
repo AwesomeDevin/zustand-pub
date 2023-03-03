@@ -19,6 +19,8 @@ const usePlatformStore = create(platformStore)
 const options = ["It's pretty useful ~","I like it ~"]
 
 
+
+
 function App() {
 
   const value = usePlatformStore(state=>state.value)

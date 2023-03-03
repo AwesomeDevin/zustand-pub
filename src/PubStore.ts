@@ -1,5 +1,4 @@
 import store, { StateCreator, StoreApi, StoreMutatorIdentifier } from 'zustand/vanilla'
-// import IframeListener from './IframeListener'
 
 
 interface IUnit<T extends object = any, Mos extends [StoreMutatorIdentifier, unknown][] = []> {
@@ -29,8 +28,6 @@ class PubStore{
     this.storeSymbol = Symbol.for(symbolKey)
     this.target = this.w ? this.w[this.storeSymbol] : undefined
 
-    // new IframeListener(symbolKey)
-
     if(this.target){
       const keys = Object.keys(this.target)
       return this.target[keys[0]].pubStore
@@ -48,7 +45,6 @@ class PubStore{
     if(this.target && this.target[key].value){
       const oldStore = this.target[key].value
       const newFnValue = fn(oldStore.setState, oldStore.getState, oldStore)
-      // extend oldStore
       oldStore.setState((state: any)=>({
         ...newFnValue,
         ...state,
