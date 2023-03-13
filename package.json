@@ -18,6 +18,7 @@
     ".": {
       "types": "./dist/typings/index.d.ts",
       "import": "./dist/index.mjs",
+      "module": "./dist/index.mjs",
       "require": "./dist/index.js",
       "default": "./dist/index.js"
     },
