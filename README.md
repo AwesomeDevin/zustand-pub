@@ -9,7 +9,10 @@
 2. `State can be cached` between applications/components, including iframes, micro frontends, etc.
 3. Based on devtools, you can `debug/trace stores between multiple applications at the same time`, which can greatly reduce the difficulty of debugging when communicating between applications.
 
-### [Official Document](https://awesomedevin.github.io/zustand-vue/en/)
+##### [Official Document](https://awesomedevin.github.io/zustand-vue/en/)   [Chinese Document](https://awesomedevin.github.io/zustand-vue/docs/introduce/start/zustand-pub)
+
+
+
 
 :::note
 <details open>
