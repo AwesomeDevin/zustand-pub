@@ -10,7 +10,7 @@
 3. Based on the `state sharing` mechanism, your application state can be pre-loaded, such as user information, login or not, list, details and other business scenarios.
 4. Based on devtools, you can `debug/trace stores between multiple applications at the same time`, which can greatly reduce the difficulty of debugging when communicating between applications.
 
-##### [Official Document](https://awesomedevin.github.io/zustand-vue/en/)   [Chinese Document](https://awesomedevin.github.io/zustand-vue/docs/introduce/start/zustand-pub)
+##### [Official Document](https://awesomedevin.github.io/zustand-vue/en/)   [中文文档](https://awesomedevin.github.io/zustand-vue/docs/introduce/start/zustand-pub)
 
 
 
