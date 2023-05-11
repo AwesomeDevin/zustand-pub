@@ -56,15 +56,15 @@ class PubStore{
   
     if(typeof window !== 'undefined'){
       //@ts-ignore
-      this.w.top[this.storeSymbol] = {
-        ...(this.w.top[this.storeSymbol] || {}),
+      this.w[this.storeSymbol] = {
+        ...(this.w[this.storeSymbol] || {}),
         [key]: {
           value: Store,
           pubStore: this,
           fn,
         },
       }
-      this.target = this.w.top[this.storeSymbol]
+      this.target = this.w[this.storeSymbol]
     }
     
     return Store
