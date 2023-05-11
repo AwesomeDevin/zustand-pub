@@ -21,7 +21,7 @@ class PubStore{
       throw new Error('Missing key of PubStore')
     }
     try{
-      this.w = typeof window !== 'undefined' && window.top 
+      this.w = typeof window !== 'undefined' && window.origin === window?.top?.origin ? window.top  : window
     }catch(e){
       this.w = typeof window !== 'undefined' && window
     }
