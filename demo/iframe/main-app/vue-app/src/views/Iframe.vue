@@ -6,8 +6,8 @@ const iframeSwitch = usePlatformStore(state=>state.iframeSwitch)
 
 </script>
 <template>
-  <iframe v-if="iframeSwitch === 'vue'" src="http://127.0.0.1:5173/vue" />
-  <iframe v-if="iframeSwitch === 'react'" src="http://127.0.0.1:5173/react" />
+  <iframe v-if="iframeSwitch === 'vue'" src="http://localhost:5173/vue" />
+  <iframe v-if="iframeSwitch === 'react'" src="http://localhost:5173/react" />
 </template>
 
 <style>

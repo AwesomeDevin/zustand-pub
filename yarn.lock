@@ -356,6 +356,11 @@ wrappy@1:
   resolved "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==
 
+zustand-pub@^1.0.0-beta.15:
+  version "1.0.0-beta.15"
+  resolved "http://registry.m.jd.com/zustand-pub/download/zustand-pub-1.0.0-beta.15.tgz#82c1c9b2760193c9652fdbb0ae659b5a89d58e7d"
+  integrity sha1-gsHJsnYBk8llL9uwrmWbWonVjn0=
+
 zustand-vue@1.0.0-beta.19:
   version "1.0.0-beta.19"
   resolved "https://registry.npmjs.org/zustand-vue/-/zustand-vue-1.0.0-beta.19.tgz#9e2ce9044c704e93f3fc727e8101e6159e9ab75b"

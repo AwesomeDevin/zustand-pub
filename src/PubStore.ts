@@ -35,7 +35,7 @@ class PubStore{
     
   }
 
-  defineStore<T extends object,Mos extends [StoreMutatorIdentifier, unknown][] = []>(key: string, fn: StateCreator<T, [], Mos>) {
+  defineStore<T extends object, Mos extends [StoreMutatorIdentifier, unknown][] = []>(key: string, fn: StateCreator<T, [], Mos>) {
     
     if (!key){
       return store(fn)
@@ -70,10 +70,11 @@ class PubStore{
     return Store
   }
 
-  getStore<T>(key: string): StoreApi<T> {
+  getStore<T extends object>(key: string): StoreApi<T> {
     //@ts-ignore
     const res = this.target && this.target[key].value
-    return res || store(()=>({}))
+    //@ts-ignore
+    return res || this.defineStore<T>(key, ()=>({}))
   }
 }
 
