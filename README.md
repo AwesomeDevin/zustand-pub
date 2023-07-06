@@ -6,7 +6,7 @@
 
 ## Why do you need zustand-pub ？
 1. Applications/Components can `mutually call/modify state` and `trigger component rendering` each other, no need for postMessage or other event communication mechanisms。
-2. `State can be cached` between applications/components, including iframes, micro frontends, etc.
+2. `Data Persistence Caching Scheme` based on external state storage, application/component/iframe/micro-frontend,etc. `state can be cached`.
 3. Based on the `state sharing` mechanism, your application state can be pre-loaded, such as user information, login or not, list, details and other business scenarios.
 4. Based on [devtools](https://github.com/AwesomeDevin/zustand-pub/blob/main/demo/iframe/main-app/vue-app/src/platformStore.ts), you can `debug/trace stores between multiple applications at the same time`, which can greatly reduce the difficulty of debugging when communicating between applications.
 5. If you are using zustand or zustand-vue, it will be very convenient and fast to use zustand-pub.
