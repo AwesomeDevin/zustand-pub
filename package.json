@@ -1,6 +1,6 @@
 {
   "name": "zustand-pub",
-  "version": "1.0.0-beta.17",
+  "version": "1.0.0-beta.18",
   "description": "Cross-Application/Cross-Framework State Management And Sharing based on zustand for React/Vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
