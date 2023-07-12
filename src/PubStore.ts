@@ -42,7 +42,7 @@ class PubStore{
     }
   
     let Store: StoreApi<T>
-    if(this.target && this.target[key].value){
+    if(this.target && this.target[key] && this.target[key].value){
       const oldStore = this.target[key].value
       const newFnValue = fn(oldStore.setState, oldStore.getState, oldStore)
       oldStore.setState((state: any)=>({
