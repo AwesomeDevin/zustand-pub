@@ -228,11 +228,11 @@ const usePlatformStore = create(platformStore || {});
 ```
 
 ## Stargazers 
-[![Stargazers repo roster for @AwesomeDevin/zustand-pub](https://reporoster.com/stars/AwesomeDevin/zustand-vue)](https://github.com/AwesomeDevin/zustand-pub/stargazers)
+[![Stargazers repo roster for @AwesomeDevin/zustand-pub](https://reporoster.com/stars/AwesomeDevin/zustand-pub)](https://github.com/AwesomeDevin/zustand-pub/stargazers)
 
 
 ## Forkers 
-[![Forkers repo roster for @AwesomeDevin/zustand-pub](https://reporoster.com/forks/AwesomeDevin/zustand-vue)](https://github.com/AwesomeDevin/zustand-pub/network/members)
+[![Forkers repo roster for @AwesomeDevin/zustand-pub](https://reporoster.com/forks/AwesomeDevin/zustand-pub)](https://github.com/AwesomeDevin/zustand-pub/network/members)
 
 
 
