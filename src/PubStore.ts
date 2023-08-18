@@ -72,7 +72,7 @@ class PubStore{
 
   getStore<T extends object>(key: string): StoreApi<T> {
     //@ts-ignore
-    const res = this.target && this.target[key].value
+    const res = this.target && this.target[key] && this.target[key].value
     //@ts-ignore
     return res || this.defineStore<T>(key, ()=>({}))
   }
