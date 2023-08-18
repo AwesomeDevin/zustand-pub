@@ -5,7 +5,9 @@
 `zustand-pub` can provides cross-application and cross-framework(react/vue) `state management and sharing` capabilities for these scenarios, such as `iframe`, `micro-frontend`, `modularization`, `componentization`, `multiple technology stacks exist at the same time`, and `gradual migration of project frameworks`.
 
 ## Why do you need zustand-pub ？
-1. Applications/Components can `mutually call/modify state` and `trigger component rendering`, if in iframe, you can discard the hard-to-maintain `postMessage + addeventlistener + action`, if in micro-frontend, you don’t need it anymore `eventCenter + action`, just call `action` directly to modify the state。
+1. Applications/Components can `mutually call/modify state` and `trigger component rendering`
+   - if in iframe, you can discard the hard-to-maintain `postMessage + addeventlistener + action`
+   - if in micro-frontend, you don’t need it anymore `eventCenter + action`, just call `action` directly to modify the state。
 2. `Data Persistence Caching Scheme` based on external state storage, application/component/iframe/micro-frontend,etc. `state can be cached`.
 3. Usually, when we refer to the global `store` in business components, it will lead to the problem that the anthor application cannot be reused, which reduces the reusability of the component. However, based on `zustand-pub`, such problems will no longer exist, reusability and development efficiency exist at the same time.
 4. In the past, the store of `modular management` was reused in different library (applications), the state could not be updated synchronously, but the state of the store based on `zustand-pub` module management could be updated synchronously, which improved the store development process. Feasibility of logic reuse and R&D efficiency.
