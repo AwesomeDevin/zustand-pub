@@ -44,7 +44,7 @@ export const Pub = new PubStore('iframe')
 //   }
 // })})
 
-// console.log(window.top[Symbol.for('iframe')]['platformStore'].value.getState(), Pub.getStore('platformStore').getState())
+console.log(window.parent[Symbol.for('iframe')]['platformStore'].value.getState())
 
 
 // method1

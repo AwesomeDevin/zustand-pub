@@ -1,5 +1,5 @@
 import store, { StateCreator, StoreApi, StoreMutatorIdentifier } from 'zustand/vanilla'
-
+import IframeListener from './IframeListener'
 
 interface IUnit<T extends object = any, Mos extends [StoreMutatorIdentifier, unknown][] = []> {
   value: StoreApi<T>,
@@ -20,14 +20,11 @@ class PubStore{
     {
       throw new Error('Missing key of PubStore')
     }
-    try{
-      this.w = typeof window !== 'undefined' && window.origin === window?.top?.origin ? window.top  : window
-    }catch(e){
-      this.w = typeof window !== 'undefined' && window
-      console.error(e)
-    }
+    this.w = window
     this.storeSymbol = Symbol.for(symbolKey)
     this.target = this.w ? this.w[this.storeSymbol] : undefined
+
+    new IframeListener(symbolKey)
 
     if(this.target){
       const keys = Object.keys(this.target)

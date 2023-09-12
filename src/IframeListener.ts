@@ -1,7 +1,5 @@
 const ACTION = 'ZUSTAND_PUB'
 
-import { IUnit } from "./type"
-
 
 class IframeListener{
   private symbolKey: string
@@ -18,21 +16,19 @@ class IframeListener{
   handleMessage(e: MessageEvent){
     if(e?.data?.action === ACTION){
       const { symbolKey, childKey, newState } = e.data as ({symbolKey: string, childKey: string, newState: any })
-     
-      console.log('handleMessage',e)
 
-      // const storeSymbol = Symbol.for(symbolKey)
-      // const oldUnit = window[storeSymbol] && window[storeSymbol][childKey]
-      // if(oldUnit){
-      //   const oldStore = oldUnit.value
-      //   const iframeStore = unit.value
+      const storeSymbol = Symbol.for(symbolKey)
+      const oldUnit = window[storeSymbol] && window[storeSymbol][childKey]
+      if(oldUnit){
+        const oldStore = oldUnit.value
+        oldStore.setState(newState)
 
-      // }else if(window[storeSymbol]){
-      //   window[storeSymbol][childKey] = unit
-      // } else{
-      //   window[storeSymbol] = {}
-      //   window[storeSymbol][childKey] = unit
-      // }
+      }else if(window[storeSymbol]){
+        window[storeSymbol][childKey] = oldUnit
+      } else{
+        window[storeSymbol] = {}
+        window[storeSymbol][childKey] = oldUnit
+      }
     }
   }
 
@@ -76,12 +72,10 @@ class IframeListener{
     const childKeys = Object.keys(origin)
     childKeys.forEach(childKey=>{
       const store = origin[childKey].value
-      // this.unsubscribes.push(store.subscribe((newState)=>{
-      //   this.childIframesPost(childKey,newState)
-      //   this.parentIframePost(childKey,newState)
-      // }))
-      // const state = store.getState()
-      
+      this.unsubscribes.push(store.subscribe((newState)=>{
+        this.childIframesPost(childKey,newState)
+        this.parentIframePost(childKey,newState)
+      }))
     })
    
   }
