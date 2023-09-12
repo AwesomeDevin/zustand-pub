@@ -24,6 +24,7 @@ class PubStore{
       this.w = typeof window !== 'undefined' && window.origin === window?.top?.origin ? window.top  : window
     }catch(e){
       this.w = typeof window !== 'undefined' && window
+      console.error(e)
     }
     this.storeSymbol = Symbol.for(symbolKey)
     this.target = this.w ? this.w[this.storeSymbol] : undefined

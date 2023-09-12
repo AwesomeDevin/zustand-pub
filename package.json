@@ -66,7 +66,7 @@
   },
   "homepage": "https://github.com/AwesomeDevin/zustand-pub#readme",
   "peerDependencies": {
-    "zustand": ">=4.1.4",
+    "zustand": ">=4.4.1",
     "zustand-vue": ">=1.0.0-beta.19"
   },
   "devDependencies": {

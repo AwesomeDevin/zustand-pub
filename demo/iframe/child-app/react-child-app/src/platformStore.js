@@ -44,7 +44,7 @@ export const Pub = new PubStore('iframe')
 //   }
 // })})
 
-console.log(window[Symbol.for('iframe')], window.top[Symbol.for('iframe')]['platformStore'].value.getState()?.reactAppState?.title, Pub.getStore('platformStore').getState()?.reactAppState?.title)
+// console.log(window.top[Symbol.for('iframe')]['platformStore'].value.getState(), Pub.getStore('platformStore').getState())
 
 
 // method1
@@ -53,6 +53,8 @@ const usePlatformStore = create(Pub.getStore('platformStore'))
 
 // method2
 // const usePlatformStore = create(platformStore)
+
+console.log('usePlatformStore',usePlatformStore)
 
 
 export default usePlatformStore
