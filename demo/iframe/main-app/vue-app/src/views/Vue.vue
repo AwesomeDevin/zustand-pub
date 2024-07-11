@@ -6,6 +6,7 @@ const setAppName = usePlatformStore(state=>state.setAppName)
 const setValue = usePlatformStore(state=>state.setValue)
 
 function handleChange(e){
+  console.log('>>>',e.target.value)
   setValue(e.target.value)
 }
 
