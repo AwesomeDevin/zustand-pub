@@ -9,19 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@micro-zoe/micro-app": "latest",
-    "install": "^0.13.0",
-    "next": "^11.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "@micro-zoe/micro-app": "0.8.11",
+    "@types/node": "20.14.10",
+    "install": "0.13.0",
+    "next": "11.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "zone.js": "~0.11.4",
     "zustand": "^4.3.2"
   },
   "devDependencies": {
-    "@types/react": "^17.0.18",
-    "cross-env": "^7.0.3",
-    "eslint": "^7.32.0",
-    "eslint-config-next": "^11.1.0",
-    "express": "^4.17.1"
+    "@types/react": "^18.3.3",
+    "cross-env": "7.0.3",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.0",
+    "express": "4.17.1"
   }
 }

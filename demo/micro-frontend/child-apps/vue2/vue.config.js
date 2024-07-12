@@ -18,6 +18,19 @@ module.exports = {
   lintOnSave: false,
   // 自定义webpack配置
   configureWebpack: {
-
+    module: {
+      rules: [
+        {
+          test: /\.m?js$/,
+          exclude: /(node_modules|bower_components)/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env']
+            }
+          }
+        }
+      ]
+    }
   },
 }

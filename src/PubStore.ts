@@ -1,4 +1,4 @@
-import store, { StateCreator, StoreApi, StoreMutatorIdentifier } from 'zustand/vanilla'
+import { createStore, StateCreator, StoreApi, StoreMutatorIdentifier } from 'zustand/vanilla'
 
 
 interface IUnit<T extends object = any, Mos extends [StoreMutatorIdentifier, unknown][] = []> {
@@ -38,7 +38,7 @@ class PubStore{
   defineStore<T extends object, Mos extends [StoreMutatorIdentifier, unknown][] = []>(key: string, fn: StateCreator<T, [], Mos>) {
     
     if (!key){
-      return store(fn)
+      return createStore(fn)
     }
   
     let Store: StoreApi<T>
@@ -51,7 +51,7 @@ class PubStore{
       }))
       Store = oldStore
     } else {
-      Store = store(fn)
+      Store = createStore(fn)
     }
   
     if(typeof window !== 'undefined'){
