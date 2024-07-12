@@ -10,6 +10,9 @@ dependencies:
   vue-router:
     specifier: ^4.1.6
     version: 4.1.6(vue@3.2.45)
+  zustand-pub:
+    specifier: 1.0.0-beta.19
+    version: 1.0.0-beta.19(zustand-vue@1.0.0-beta.20)(zustand@4.4.1)
 
 devDependencies:
   '@types/node':
@@ -259,6 +262,22 @@ packages:
   /@types/node@18.11.12:
     resolution: {integrity: sha1-ief4qoyIq/Qy+b1ZSIgUTX26EKo=, tarball: http://registry.m.jd.com/@types/node/download/@types/node-18.11.12.tgz}
     dev: true
+
+  /@types/prop-types@15.7.5:
+    resolution: {integrity: sha1-XxnSuFqY6VWANvajysyIGUIPBc8=, tarball: http://registry.m.jd.com/@types/prop-types/download/@types/prop-types-15.7.5.tgz}
+    dev: false
+
+  /@types/react@18.2.21:
+    resolution: {integrity: sha1-d0w3/QG1ItC5Gu0EgRtY5OBRTtk=, tarball: http://registry.m.jd.com/@types/react/download/@types/react-18.2.21.tgz}
+    dependencies:
+      '@types/prop-types': 15.7.5
+      '@types/scheduler': 0.16.3
+      csstype: 3.1.2
+    dev: false
+
+  /@types/scheduler@0.16.3:
+    resolution: {integrity: sha1-zvCePsmvHWPSpsxbODpzfiTm3PU=, tarball: http://registry.m.jd.com/@types/scheduler/download/@types/scheduler-0.16.3.tgz}
+    dev: false
 
   /@vitejs/plugin-vue@4.0.0(vite@4.0.0)(vue@3.2.45):
     resolution: {integrity: sha1-k4Fb7/0j20YojHhzUqjqMaDAPl4=, tarball: http://registry.m.jd.com/@vitejs/plugin-vue/download/@vitejs/plugin-vue-4.0.0.tgz}
@@ -580,6 +599,10 @@ packages:
   /csstype@2.6.21:
     resolution: {integrity: sha1-LvuFt8xVyAAXxmpa18vZMf2jqQ4=, tarball: http://registry.m.jd.com/csstype/download/csstype-2.6.21.tgz}
 
+  /csstype@3.1.2:
+    resolution: {integrity: sha1-HUv51XLxHBQDHwQ24cELwfVx9Qs=, tarball: http://registry.m.jd.com/csstype/download/csstype-3.1.2.tgz}
+    dev: false
+
   /dayjs@1.11.7:
     resolution: {integrity: sha1-SylpImQvcJmVRNEUSiwlcw/OY+I=, tarball: http://registry.m.jd.com/dayjs/download/dayjs-1.11.7.tgz}
     dev: false
@@ -818,6 +841,10 @@ packages:
   /hosted-git-info@2.8.9:
     resolution: {integrity: sha1-3/wL+aIcAiCQkPKqaUKeFBTa8/k=, tarball: http://registry.m.jd.com/hosted-git-info/download/hosted-git-info-2.8.9.tgz}
     dev: true
+
+  /immer@10.0.2:
+    resolution: {integrity: sha1-EWNsW3es9SngWVgtdvrzOL61YUE=, tarball: http://registry.m.jd.com/immer/download/immer-10.0.2.tgz}
+    dev: false
 
   /internal-slot@1.0.5:
     resolution: {integrity: sha1-8qLuIfZo+GJ6RmfzCdwPT7ZnSYY=, tarball: http://registry.m.jd.com/internal-slot/download/internal-slot-1.0.5.tgz}
@@ -1108,6 +1135,13 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
+  /react@18.2.0:
+    resolution: {integrity: sha1-VVvZhZKIMlX6AN4U8RUakXtdd9U=, tarball: http://registry.m.jd.com/react/download/react-18.2.0.tgz}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: 1.4.0
+    dev: false
+
   /read-pkg@3.0.0:
     resolution: {integrity: sha1-nLxoaXj+5l0WwA4rGcI3/Pbjg4k=, tarball: http://registry.m.jd.com/read-pkg/download/read-pkg-3.0.0.tgz}
     engines: {node: '>=4'}
@@ -1310,6 +1344,14 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: true
 
+  /use-sync-external-store@1.2.0(react@18.2.0):
+    resolution: {integrity: sha1-fb79bvP+TnZ6DPXXKHqs+1hGkoo=, tarball: http://registry.m.jd.com/use-sync-external-store/download/use-sync-external-store-1.2.0.tgz}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /validate-npm-package-license@3.0.4:
     resolution: {integrity: sha1-/JH2uce6FchX9MssXe/uw51PQQo=, tarball: http://registry.m.jd.com/validate-npm-package-license/download/validate-npm-package-license-3.0.4.tgz}
     dependencies:
@@ -1431,3 +1473,37 @@ packages:
     dependencies:
       isexe: 2.0.0
     dev: true
+
+  /zustand-pub@1.0.0-beta.19(zustand-vue@1.0.0-beta.20)(zustand@4.4.1):
+    resolution: {integrity: sha1-QNOm5lA8uRbVQD7hmxh6mXKN1F8=, tarball: http://registry.m.jd.com/zustand-pub/download/zustand-pub-1.0.0-beta.19.tgz}
+    peerDependencies:
+      zustand: '>=4.1.4'
+      zustand-vue: '>=1.0.0-beta.19'
+    dependencies:
+      zustand: 4.4.1(@types/react@18.2.21)(immer@10.0.2)(react@18.2.0)
+      zustand-vue: 1.0.0-beta.20(vue@3.2.45)(zustand@4.4.1)
+    dev: false
+
+  /zustand-vue@1.0.0-beta.20(vue@3.2.45)(zustand@4.4.1):
+    resolution: {integrity: sha1-l1IgAw1zX6uu1MIN83wEpZXoCC0=, tarball: http://registry.m.jd.com/zustand-vue/download/zustand-vue-1.0.0-beta.20.tgz}
+    peerDependencies:
+      vue: '>=2.6.0'
+      zustand: '>=4.1.4'
+    dependencies:
+      vue: 3.2.45
+      zustand: 4.4.1(@types/react@18.2.21)(immer@10.0.2)(react@18.2.0)
+    dev: false
+
+  /zustand@4.4.1(@types/react@18.2.21)(immer@10.0.2)(react@18.2.0):
+    resolution: {integrity: sha1-DNOj5HVvIYEb2VZBj9xoaHfos7A=, tarball: http://registry.m.jd.com/zustand/download/zustand-4.4.1.tgz}
+    engines: {node: '>=12.7.0'}
+    peerDependencies:
+      '@types/react': '>=16.8'
+      immer: '>=9.0'
+      react: '>=16.8'
+    dependencies:
+      '@types/react': 18.2.21
+      immer: 10.0.2
+      react: 18.2.0
+      use-sync-external-store: 1.2.0(react@18.2.0)
+    dev: false
