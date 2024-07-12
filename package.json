@@ -4,7 +4,10 @@
   "description": "Cross-Application/Cross-Framework State Management And Sharing based on zustand for React/Vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx vite build && npx tsc --emitDeclarationOnly"
+    "build": "npx vite build && npx tsc --emitDeclarationOnly",
+    "demo:iframe": " pnpm -r --filter './demo/iframe/**' run dev",
+    "demo:micro": " pnpm -r --filter './demo/micro-app/**' run dev"
+
   },
   "repository": {
     "type": "git",
@@ -31,7 +34,9 @@
     }
   },
   "files": [
-    "dist/"
+    "dist/typings/",
+    "dist/*.mjs",
+    "dist/*.js"
   ],
   "keywords": [
     "zustand",
@@ -55,7 +60,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.1",
-    "typescript": "^4.9.3",
+    "typescript": "4.9.3",
     "vite": "^4.0.4",
     "zustand-vue": "1.0.0-beta.24"
   }
